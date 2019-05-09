@@ -17,9 +17,9 @@ Now that the data has been modified into a form ready for classification, I cond
 
 From just 2 components, there is a lot of noise on the left of the figure and one position that is clearly distinct from the rest. This position would be the Goalkeeper and it shows since these players have much higher values in the GK stats. From the position codes, there are 27 possible positions which is another reason for the noisy mess and a change will be necessary for the model. A note to make is that there are 11 players on the field and the reason for so many classes is due to the different formations in soccer. These allow teams to play a particular style whether it be more offensive or defensive and so the extra classes are roles that fit a respect style of soccer. Here I decided to write a function that would convert these roles to fit the original 11 positions! Another note to take into account is that since the Goalkeeper is clearly distinct from the rest of the players, we can remove this role from the model and drop the GK columns so that fewer features are used. 
 
-# Part 2B: Model Selection
+# Part 2B: Model Selection (SVM)
 
-When selecting a model, I took into consideration the results of the PCA. Because there are 34 features to work with, my first choice was the SVC since it is able to run a multi-class classification and work with vectors of many dimensions. Following the procedure on Jupyter, I created a train_test_split on the dataset, fitted and predicted the positions and ran metrics using a classification report and confusion matrix. (Note that due to the complexity of this dataset, this process may take a while so be patient)
+When selecting a model, I took into consideration the results of the PCA. Because there are 34 features to work with, my first choice was the (Support Vector Machine) SVC since it is able to run a multi-class classification and work with vectors of many dimensions. Following the procedure on Jupyter, I created a train_test_split on the dataset, fitted and predicted the positions and ran metrics using a classification report and confusion matrix. (Note that due to the complexity of this dataset, this process may take a while so be patient)
 
 # Insert first report 
 
@@ -29,11 +29,40 @@ Running the Gridsearch with 16 candidate parameters took approximately 20 minute
 
 # Insert second report 
 
-There is a significant improvement in the F1 scores however this is only due to sacrificing accuracy to eliminating the conflicting noise that was present in the previous model. Checking the PCA figure, we note that while there is a clear distinction between a forward and defender, the model still has issue with differentiation mid players. This goes back to the function that was tailored towards a particular team formation which focuses heavily on offense. It is to be noted that there are many different formations each with their strategies. 
+There is a significant improvement in the F1 scores however this is only due to sacrificing accuracy thus eliminating the conflicting noise that was present in the previous model. Checking the PCA figure, we note that while there is a clear distinction between a forward and defender, the model still has issues with differentiation of mid players. This goes back to the function that was tailored towards a particular team formation which focuses heavily on offense. It is to be noted that there are many different formations each with their strategies. 
 
 # Insert third image 
 
-## Still being Updated! 
+To not have such a simplified model, I also decided to modify the dataset so that playing on the left or right could just be grouped as a side (in this case LW and RW become SW as an example). Once again following the same procedure, I ran a linear SVC model and obtained the following information: 
+
+# Insert third report 
+
+The results are not as good as those of the more generalized roles in soccers but there is no longer the issue of the model confusing the wing and back positions and therefore is independent of the side the player is on. One note to make is that the CAM and CDM positions have the worst F1-scores of all positions and this is due to these two positions being hybrid position which was previously mentioned in the limitations of the first test model. 
+
+# Part 2C: Model Selection (Alternatives)
+
+One of the bigger issues in the selection of the SVM model was the run time. In the instance of classifying 11 positions, it took the system approximately 5 minutes to obtain the classification results. Another possible algorithm to use is the Random Forest Classifier (RFC) which separates classes based on randomly selected features and repeats the process for a desired number of decision trees; that way there is no bias (only one feature/variable being the sole indicator of a split in the tree). As a example, I conducted a RFC on the third test and obtained the following results: 
+
+# Insert RFC report 
+
+A significant difference to note is the time elapsed to complete this task which was about 30 seconds. Even though the scores are lower this is a much greater improvement if time taken is a metric of importance. So in order to figure out which Machine Learning Algorithm would be better to use I conducted a Cross Validation score analysis for each model and I got the following results:
+
+# Insert CV scores 
+
+
+
+
+
+
+
+
+# Part 3: Data Visualization
+
+# Part 4: Discussion
+
+
+
+
 
 
 
