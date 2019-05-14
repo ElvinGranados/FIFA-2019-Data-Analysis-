@@ -49,14 +49,19 @@ A significant difference to note is the time elapsed to complete this task which
 
 # Insert CV scores 
 
-
-
-
-
-
-
+The CV score method ran each classification model with a chose k value of 5 which would split the dataset into combinations of train and test data groups performed over five iterations. The scores range between 0 and 1 and the closer to 1, the better the model performed in classifying the data. Although the RFC takes a shorter time to evaluate the data, the scores are varying and depending on the metrics of importance may not prove to be reliable whereas the SVC model is consistant with its performance however the classification takes a much longer time.
 
 # Part 3: Data Visualization
+
+Here we can showcase the visualization capabilities of Jupyter as well as find interesting information within the FIFA dataset. Of the possible 18000+ players, I wanted to learn more about these individuals so one attribute was their country of origin just to figure out their distribution. Using choromap, I was able to create an interactive visualization of the counts of players from all around the world.
+
+# Insert choromap 
+
+Just from the map, it is seen that Western Europe and South America are producing the most players followed by a decent amount in North America and Northern Europe. Africa as a continent does not have many players in the FIFA league. While this is strange at first impression, delving further and doing some research it turns out that the European countries are pushing towards import these players who are talented in their respective countries as well as descendents of past players who played for their national teams respectively. This is leading to a competition between the European and African countries to obtain players but as for why they will not play for their home country has not been answered. It is most likely that whoever is offering more salary wise and the reputation the player can potentially receive that is explaning the emigration of these African players. 
+
+We can also observe 
+
+
 
 # Part 4: Discussion
 
