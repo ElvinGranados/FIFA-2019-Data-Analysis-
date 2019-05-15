@@ -57,9 +57,21 @@ Here we can showcase the visualization capabilities of Jupyter as well as find i
 
 # Insert choromap 
 
-Just from the map, it is seen that Western Europe and South America are producing the most players followed by a decent amount in North America and Northern Europe. Africa as a continent does not have many players in the FIFA league. While this is strange at first impression, delving further and doing some research it turns out that the European countries are pushing towards import these players who are talented in their respective countries as well as descendents of past players who played for their national teams respectively. This is leading to a competition between the European and African countries to obtain players but as for why they will not play for their home country has not been answered. It is most likely that whoever is offering more salary wise and the reputation the player can potentially receive that is explaning the emigration of these African players. 
+Just from the map, Western Europe and South America are producing the most players followed by a decent amount in North America and Northern Europe. Africa as a continent does not have many players in the FIFA league. While this is strange at first impression, delving further and doing some research it turns out that the European countries are pushing towards importings these players who are talented in their respective countries as well as being descendents of past players who played for the European national teams respectively. This is leading to a competition between the European and African countries to obtain players but as for why they do not play for their home country is still unclear. It is most likely that whoever is offering more salary wise and the reputation the player can potentially receive based on team affiliation that is explaning the emigration of these African players. 
 
-We can also observe 
+I also ran some other basic statistical analysis on the dataset; in particular using a countplot, I created a function to figure out which roles ranked the highest given a particular statistic for a number of chosen players. This is helpful to note since each position has its specific role and as a manager one should be able to allocate the appropriate players. As an example, I decided to evaluate the top 100 players in Marking, Aggression, and Ball Control and obtained the following results:
+
+# Insert countplot images 
+
+If one were interested in training for a particular position or trying to figure out the most important attributes for a player this countplot would give enough information. Other parameters of interest include the overall score and value of a soccer player which I presented as a histogram with its respective KDE. 
+
+# Insert KDE plots 
+
+Using seaborn, I also created a jointplot involving the two features and set the plot as a KDE plot; the darker the region, the more heavily populated the number of players. 
+
+# Insert jointplot 
+
+Lastly using Matplotlib, I made a pie chart that showed the distribution of clubs the top 100 performing players belonged in. 
 
 
 
