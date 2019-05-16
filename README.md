@@ -19,7 +19,7 @@ From just 2 components, there is a lot of noise on the left of the figure and on
 
 # Part 2B: Model Selection (SVM)
 
-When selecting a model, I took into consideration the results of the PCA. Because there are 34 features to work with, my first choice was the (Support Vector Machine) SVC since it is able to run a multi-class classification and work with vectors of many dimensions. Following the procedure on Jupyter, I created a train_test_split on the dataset, fitted and predicted the positions and ran metrics using a classification report and confusion matrix. (Note that due to the complexity of this dataset, this process may take a while so be patient)
+When selecting a model, I took into consideration the results of the PCA. Because there are 34 features to work with, my first choice was the (Support Vector Machine) SVC since it is able to run a multi-class classification and work with vectors of many dimensions. This algorithm uses what is known as a hyperplane which is basically a function (kernel) that will separate each class to the best of its ability. Following the procedure on Jupyter, I created a train_test_split on the dataset, fitted and predicted the positions and ran metrics using a classification report and confusion matrix. (Note that due to the complexity of this dataset, this process may take a while so be patient)
 
 # Insert first report 
 
@@ -63,19 +63,21 @@ I also ran some other basic statistical analysis on the dataset; in particular u
 
 # Insert countplot images 
 
-If one were interested in training for a particular position or trying to figure out the most important attributes for a player this countplot would give enough information. Other parameters of interest include the overall score and value of a soccer player which I presented as a histogram with its respective KDE. 
+If one were interested in training for a particular position or trying to figure out the most important attributes for a player this countplot would give enough information. Other parameters of interest include the overall score and value of a soccer player which I presented as a histogram with its respective KDE. Interesting to note is that the overall player stat follows a bell shaped so it can be considered normally distributed. 
 
 # Insert KDE plots 
 
-Using seaborn, I also created a jointplot involving the two features and set the plot as a KDE plot; the darker the region, the more heavily populated the number of players. 
+Using seaborn, I also created a jointplot involving the two features and set the plot as a KDE plot; the darker the region, the more heavily populated the number of players. It appears that most players have overall scores in the mid 60's range and their contracts are around half a million dollars. 
 
 # Insert jointplot 
 
-Lastly using Matplotlib, I made a pie chart that showed the distribution of clubs the top 100 performing players belonged in. 
+Lastly using Matplotlib, I made a pie chart that showed the distribution of clubs the top 50 performing players belonged in. Almost as if were a gang of elites, people who do follow club soccer leagues should of be aware of these big club names and their immense fanbase.
 
-
+These are just a few visuals that we can do with the dataset. This section was just to show the convenience of Jupyter running all these graphics on the same notebook and the outputs being all in the same cell.
 
 # Part 4: Discussion
+
+Personally, I came into this project knowing nothing about soccer; my father and brother enjoy the sport and being hispanic, soccer is deeply integrated within our culture. Some notes to mention about this project are that there is an extensive amount of delving one can do with any dataset and this side project was to showcase possible applications of data analysis and model creation. In particular, the ideal classification system is not going to exist and instead metrics must be defined in order to accept a model that fits the predetermined criterion as well as possible. At the end, I selected the RFC model since it was much quicker than the SVC model; the consistency should be noted as a major issue however given the similarity of some positions and accounting for the various formations of a soccer team whether the strategy is to play defensive or offensive, there is too much noise within the player dataset. Therefore, it is acceptable that a high error rate was present within the model selection process. As previously mentioned, I could of also implemented feature engineering and only selected the attributes that were distinct for various positions in soccer. Interesting enough, the data visualization allowed me to pinpoint exactly which stats where important for a role and why. As an example 
 
 
 
