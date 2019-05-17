@@ -71,13 +71,18 @@ Using seaborn, I also created a jointplot involving the two features and set the
 
 # Insert jointplot 
 
-Lastly using Matplotlib, I made a pie chart that showed the distribution of clubs the top 50 performing players belonged in. Almost as if were a gang of elites, people who do follow club soccer leagues should of be aware of these big club names and their immense fanbase.
+Lastly using Matplotlib, I made a pie chart that showed the distribution of clubs the top 50 performing players belonged in. Almost as if were a country club of elites, those that do follow soccer leagues should of be aware of these big club names and their immense fanbase.
 
 These are just a few visuals that we can do with the dataset. This section was just to show the convenience of Jupyter running all these graphics on the same notebook and the outputs being all in the same cell.
 
 # Part 4: Discussion
 
-Personally, I came into this project knowing nothing about soccer; my father and brother enjoy the sport and being hispanic, soccer is deeply integrated within our culture. Some notes to mention about this project are that there is an extensive amount of delving one can do with any dataset and this side project was to showcase possible applications of data analysis and model creation. In particular, the ideal classification system is not going to exist and instead metrics must be defined in order to accept a model that fits the predetermined criterion as well as possible. At the end, I selected the RFC model since it was much quicker than the SVC model; the consistency should be noted as a major issue however given the similarity of some positions and accounting for the various formations of a soccer team whether the strategy is to play defensive or offensive, there is too much noise within the player dataset. Therefore, it is acceptable that a high error rate was present within the model selection process. As previously mentioned, I could of also implemented feature engineering and only selected the attributes that were distinct for various positions in soccer. Interesting enough, the data visualization allowed me to pinpoint exactly which stats where important for a role and why. As an example 
+Personally, I came into this project knowing nothing about soccer; my father and brother enjoy the sport and being hispanic, soccer is deeply integrated within our culture. A note to mention about this project is that there is an extensive amount of delving one can do with any dataset and this side project was to showcase possible applications of data analysis and model creation for use in predictive power. In particular, the ideal classification system is not going to exist and instead metrics must be defined in order to accept a model that fits the predetermined criterion as well as possible. At the end, I selected the RFC model since it was much quicker than the SVC model; the consistency should be noted as a major issue however given the similarity of some positions and accounting for the various formations of a soccer team whether the strategy is to play defensive or offensive, there is too much noise within the player dataset. Therefore, it is acceptable that a high error rate was present within the model selection process. As previously mentioned, I could of also implemented feature selection and only chosen the attributes that were distinct for various positions in soccer however further metrics would need to be implemeted. Interesting enough, the data visualization allows one to pinpoint exactly which stats are important for a role in order to propely train a potential player or set up particular formations which can be used to assist in the feature engineering. At the end like any other sport, these players are elite and it is a matter of experience/training that will improve overall skill. 
+
+# References/Sources 
+
+http://theconversation.com/african-countries-are-losing-out-on-their-football-talent-they-need-to-figure-out-why-100039
+http://kaggle.com
 
 
 
